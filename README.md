@@ -11,5 +11,6 @@ Modularized scraping code
 - ECS/Fargate
     - ECSOperator
 - Amazon Managed Workflows for Apache Airflow (MWAA)
-- Postgresql linkage
+- Postgresql linkage (Neon)
 - Cookiecutter for jobs
+- Viewer on personal website
