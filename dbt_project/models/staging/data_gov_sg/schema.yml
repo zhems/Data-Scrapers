@@ -1,0 +1,49 @@
+version: 2
+
+models:
+  - name: stg_cea_property_transactions
+    description: Staging model for CEA property transactions with cleaned and standardized column names
+    columns:
+      - name: transaction_id
+        description: Surrogate key for unique transaction identification
+        tests:
+          - unique
+          - not_null
+
+      - name: salesperson_name
+        description: Name of the salesperson
+
+      - name: salesperson_reg_num
+        description: Salesperson registration number
+        tests:
+          - not_null
+
+      - name: represented
+        description: Party represented (BUYER or SELLER)
+
+      - name: transaction_date
+        description: Date of the property transaction
+        tests:
+          - not_null
+
+      - name: transaction_type
+        description: Type of transaction (RESALE, RENTAL, etc.)
+        tests:
+          - not_null
+
+      - name: property_type
+        description: Type of property (HDB, Condo, Landed, etc.)
+        tests:
+          - not_null
+
+      - name: town
+        description: Town where the property is located
+
+      - name: district
+        description: Singapore district number
+
+      - name: general_location
+        description: General location of the property
+
+      - name: loaded_at
+        description: Timestamp when data was loaded into the database

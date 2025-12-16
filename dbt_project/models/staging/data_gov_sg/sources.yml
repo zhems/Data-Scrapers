@@ -1,0 +1,23 @@
+version: 2
+
+sources:
+  - name: data_gov_sg
+    description: Raw data from data.gov.sg scrapers
+    database: neondb
+    schema: public
+    tables:
+      - name: raw_cea_property_transactions
+        description: Raw CEA salespersons property transaction records
+        columns:
+          - name: transaction_date
+            description: Date of the property transaction
+          - name: address
+            description: Property address
+          - name: property_type
+            description: Type of property (HDB, Condo, Landed, etc.)
+          - name: market_segment
+            description: Market segment (Resale, Rental, etc.)
+          - name: transacted_price
+            description: Transaction price
+          - name: loaded_at
+            description: Timestamp when data was loaded
